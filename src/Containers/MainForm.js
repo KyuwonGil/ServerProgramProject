@@ -1,7 +1,11 @@
 import React from 'react'
 
 function MainForm({component}){
-    return <div>{component}</div>
+    return (
+        <div class="row">
+            {component}
+        </div>
+    )
 }
 
 export default MainForm

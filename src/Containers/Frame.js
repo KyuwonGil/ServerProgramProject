@@ -1,7 +1,7 @@
 import React from 'react'
-import MainForm from './MainForm'
-import PostForm from './PostForm'
-import InputForm from './InputForm'
+import MainForm from './MainFrame'
+import PostForm from './PostFrame'
+import InputForm from './InputFrame'
 
 function Form({type, component}){
   if(type === 'main') return <MainForm component={component}/>

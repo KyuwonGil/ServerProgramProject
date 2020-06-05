@@ -1,8 +1,8 @@
 import React from 'react'
-import Board from './Components/BulletinBorad'
-import Login from './Components/Login'
-import SignUp from './Components/SignUp'
-import Form from './Containers/Form'
+import Board from './Components/BulletinBoradForm'
+import Login from './Components/LoginForm'
+import SignUp from './Components/SignUpForm'
+import Frame from './Containers/Frame'
 
 var type = 'input'
 
@@ -19,6 +19,6 @@ var board = <Board pList={testList}/>
 var login = <Login/>
 var signUp = <SignUp/>
 
-var App = () => <Form type={type} component={signUp}/>
+var App = () => <Frame type={type} component={signUp}/>
 
 export default App;

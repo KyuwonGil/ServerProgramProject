@@ -4,21 +4,32 @@ import Login from './Components/LoginForm'
 import SignUp from './Components/SignUpForm'
 import Frame from './Containers/Frame'
 
-var type = 'input'
+class App extends React.Component {
 
-var testList = [
-  {
-      no : 1,
-      title : 'first',
-      writer : 'me',
-      day : 'today'
+  constructor(props) {
+    super(props)
+    this.state = {
+      type : 'main',
+      component : null
+    }
   }
-]
 
-var board = <Board pList={testList}/>
-var login = <Login/>
-var signUp = <SignUp/>
+  getComponent(form){
+    if(form.name === 'Board')
+      return <Board pList={form.pList}/>
+    else if(form.name === 'Login')
+      return <Login/>
+    else if(form.name === 'SignUp')
+      return <SignUp/>
+  }
 
-var App = () => <Frame type={type} component={signUp}/>
+  componentDidMount() {
+    fetch('api/board')
+      .then(res => res.json())
+      .then(data => this.setState({type : data.type, component : this.getComponent(data.form)}))
+  }
+
+  render = () => <Frame type={this.state.type} component={this.state.component} /> 
+}
 
 export default App;

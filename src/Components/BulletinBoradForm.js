@@ -2,13 +2,14 @@ import React from 'react'
 
 function Board({pList}){
     return(
-        <table>
-            <thead>
+        <table class="table">
+            <thead class="thead-light">
                 <tr>
-                    <th>번호</th>
-                    <th>제목</th>
-                    <th>작성자</th>
-                    <th>날짜</th>
+                    <th>NO</th>
+                    <th>Title</th>
+                    <th>Writer</th>
+                    <th>Day</th>
+                    <th>Number of hit</th>
                 </tr>
             </thead>
             <tbody>
@@ -27,6 +28,7 @@ function PList({pList}){
                 <td>{post.title}</td>
                 <td>{post.writer}</td>
                 <td>{post.day}</td>
+                <td>{post.numOfHit}</td>
             </tr>
         )
     )

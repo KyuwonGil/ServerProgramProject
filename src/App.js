@@ -16,7 +16,7 @@ class App extends React.Component {
 
   getComponent(form){
     if(form.name === 'Board')
-      return <Board pList={form.pList}/>
+      return <Board pList={form.values}/>
     else if(form.name === 'Login')
       return <Login/>
     else if(form.name === 'SignUp')
@@ -24,7 +24,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    fetch('api/board')
+    fetch('http://localhost:3001/api/board')
       .then(res => res.json())
       .then(data => this.setState({type : data.type, component : this.getComponent(data.form)}))
   }

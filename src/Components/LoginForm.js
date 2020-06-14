@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Login(){
+function Login({event}){
     return (
         <form>
             <input type="text" placeholder="ID"/>

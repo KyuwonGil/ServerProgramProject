@@ -1,14 +1,17 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './CSS/index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import { Router, Route, IndexRoute, browserHistory } from 'react-router'
+import './CSS/index.css'
+import App from './App'
+import * as serviceWorker from './serviceWorker'
 import 'bootstrap/dist/css/bootstrap.css'
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <Router history={browserHistory}>
+    <Route path="/" component={App}>
+      <IndexRoute component={}/>
+    </Route>
+  </Router>,
   document.getElementById('root')
 );
 

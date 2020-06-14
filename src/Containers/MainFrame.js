@@ -1,6 +1,6 @@
 import React from 'react'
 
-function MainForm({ component }) {
+function MainFrame({ component , event}) {
     return (
         <div class="container pt-5">
             <h1>Bulletin Board</h1>
@@ -8,12 +8,12 @@ function MainForm({ component }) {
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item active">
-                            <input class="btn btn-dark my-2 my-sm-0" type="button" value="posting" />
+                            <input class="btn btn-dark my-2 my-sm-0" type="button" value="posting" onClick={() => event('post', {name : 'WritePost'})} />
                         </li>
                     </ul>
                     <form class="form-inline my-2 my-lg-0">
-                        <input type="submit" class="btn btn-dark my-2 my-sm-0" value="login" />
-                        <input type="submit" class="btn btn-dark my-2 my-sm-0" value="sign up" />
+                        <input type="submit" class="btn btn-dark my-2 my-sm-0" value="login" onClick={() => event('input', {name : 'Login'})}/>
+                        <input type="submit" class="btn btn-dark my-2 my-sm-0" value="sign up" onClick={() => event('input', {name : 'SignUp'})}/>
                     </form>
                 </div>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -25,4 +25,4 @@ function MainForm({ component }) {
     )
 }
 
-export default MainForm
+export default MainFrame

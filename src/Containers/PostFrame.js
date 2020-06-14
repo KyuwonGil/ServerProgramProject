@@ -1,6 +1,6 @@
 import React from 'react'
 
-function PostForm({component}){
+function PostForm({component, event}){
     return <div>{component}</div>
 }
 

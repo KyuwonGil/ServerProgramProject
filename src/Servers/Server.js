@@ -3,11 +3,16 @@ const app = express()
 //const cors = require('cors')
 const bodyParser = require('body-parser')
 const port = process.env.PORT || 3001
-const route = require('./Routes/index')
+const boardRoute = require('./Routes/board')
+const signRoute = require('./Routes/sign')
+const postRoute = require('./Routes/post')
+const commentRoute = require('./Routes/comment')
 
 //app.use(cors())
 
 app.use(bodyParser.json())
-app.use('/api', route)
-
+app.use('/board', boardRoute)
+app.use('/sign', signRoute)
+app.use('/post', postRoute)
+app.use('/comment', commentRoute)
 app.listen(port, () => console.log(`express is running on ${port}`))

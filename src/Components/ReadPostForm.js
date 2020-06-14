@@ -1,18 +1,18 @@
 import React from 'react'
 
-function Post({post, comment}){
+function RaadPost({post, comment, event}){
     return(
         <div>
-            <span>{post.title}</span>
-            <span>{post.contents}</span>
-            <span>{post.writer}</span>
-            <span>{post.day}</span>
-            <Comment comment={comment}/>
+            <span>{post[0]}</span>
+            <span>{post[1]}</span>
+            <span>{post[2]}</span>
+            <span>{post[3]}</span>
+            <span>{post[4]}</span>
         </div>
     )
 }
 
-function Comment({comment}){
+function Comment({comment, event}){
     return (
         <div>
             <span>{comment.title}</span>
@@ -23,4 +23,4 @@ function Comment({comment}){
     )
 }
 
-export default Post
+export default RaadPost

@@ -1,8 +1,8 @@
 import React from 'react'
 
-function SignUp() {
+function SignUp({event}) {
     return (
-        <form>
+        <form action="/sign/up" method="post">
             <div align="center" class="form-group">
                 <h1>Sign up</h1><br/>
             </div>
@@ -18,18 +18,48 @@ function SignUp() {
             <div class="form-group">
                 <div class="row">
                     <div class="col">
-                        <select class="form-control">
-                            <option>year</option>
+                        <select class="form-control" name="year">
+                            <option selected>year</option>
+                            <option>2000</option>
+                            <option>2001</option>
+                            <option>2002</option>
+                            <option>2003</option>
+                            <option>2004</option>
+                            <option>2005</option>
+                            <option>2006</option>
+                            <option>2007</option>
                         </select>
                     </div>
                     <div class="col">
-                        <select class="form-control">
-                            <option>month</option>
+                        <select class="form-control" name="month">
+                            <option selected>month</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            <option>9</option>
+                            <option>10</option>
+                            <option>11</option>
+                            <option>12</option>
                         </select>
                     </div>
                     <div class="col">
-                        <select class="form-control">
-                            <option>day</option>
+                        <select class="form-control" name="day">
+                            <option selected>day</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            <option>9</option>
+                            <option>10</option>
                         </select>
                     </div>
                 </div><br/>
@@ -48,8 +78,7 @@ function SignUp() {
                 <div class="input-group-append">
                     <select class="form-control">
                         <option>@naver.com</option>
-                        <option>@gmail.com</option>
-                        <option>@nate.com</option>
+                        <option>@gmail.com</option> 
                     </select>
                 </div>
             </div><br/>
